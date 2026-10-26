@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default: Rose & Peony Floral */
+  --bg-main: #fff5f7;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-subtle: #ffe9ee;
+  --bg-badge: #ffd8e2;
+  --border-color: #ffcad7;
+  --border-hover: #ff9fb4;
+  --text-main: #4a212c;
+  --text-muted: #8c4c5e;
+  --accent: #e85577;
+  --accent-hover: #d43d60;
+  --accent-text: #ffffff;
+  --accent-light: #fff0f3;
+  --card-shadow: 0 10px 30px -4px rgba(232, 85, 119, 0.14);
+  --ring-color: rgba(232, 85, 119, 0.35);
+  --floral-emoji: '🌸';
+}
+
+[data-theme='rose'] {
+  --bg-main: #fff5f7;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-subtle: #ffe9ee;
+  --bg-badge: #ffd8e2;
+  --border-color: #ffcad7;
+  --border-hover: #ff9fb4;
+  --text-main: #4a212c;
+  --text-muted: #8c4c5e;
+  --accent: #e85577;
+  --accent-hover: #d43d60;
+  --accent-text: #ffffff;
+  --accent-light: #fff0f3;
+  --card-shadow: 0 10px 30px -4px rgba(232, 85, 119, 0.14);
+  --ring-color: rgba(232, 85, 119, 0.35);
+}
+
+[data-theme='lavender'] {
+  --bg-main: #f9f6fd;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-subtle: #f0e9fa;
+  --bg-badge: #e3d6f7;
+  --border-color: #d4c2f2;
+  --border-hover: #bba2e9;
+  --text-main: #33214c;
+  --text-muted: #6a4f91;
+  --accent: #8b55df;
+  --accent-hover: #763ece;
+  --accent-text: #ffffff;
+  --accent-light: #f5effe;
+  --card-shadow: 0 10px 30px -4px rgba(139, 85, 223, 0.14);
+  --ring-color: rgba(139, 85, 223, 0.35);
+}
+
+[data-theme='wildflower'] {
+  --bg-main: #fdfaf2;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-subtle: #f9f2dd;
+  --bg-badge: #f4e5bf;
+  --border-color: #edd59b;
+  --border-hover: #e0be6c;
+  --text-main: #453416;
+  --text-muted: #806536;
+  --accent: #d98218;
+  --accent-hover: #be6f10;
+  --accent-text: #ffffff;
+  --accent-light: #fef7ea;
+  --card-shadow: 0 10px 30px -4px rgba(217, 130, 24, 0.14);
+  --ring-color: rgba(217, 130, 24, 0.35);
+}
+
+[data-theme='botanical'] {
+  --bg-main: #f6faf5;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-subtle: #e9f4e6;
+  --bg-badge: #d8edd3;
+  --border-color: #c1e2ba;
+  --border-hover: #9fce97;
+  --text-main: #203823;
+  --text-muted: #4e7352;
+  --accent: #4d9354;
+  --accent-hover: #3d7e43;
+  --accent-text: #ffffff;
+  --accent-light: #edf7eb;
+  --card-shadow: 0 10px 30px -4px rgba(77, 147, 84, 0.14);
+  --ring-color: rgba(77, 147, 84, 0.35);
+}
+
+/* Dark Floral Themes */
+[data-theme='midnight-rose'] {
+  --bg-main: #18131a;
+  --bg-card: rgba(33, 24, 36, 0.94);
+  --bg-subtle: #291c2e;
+  --bg-badge: #382440;
+  --border-color: #4f335b;
+  --border-hover: #714883;
+  --text-main: #fbf5fc;
+  --text-muted: #c4a9ce;
+  --accent: #e26d97;
+  --accent-hover: #f07ea8;
+  --accent-text: #ffffff;
+  --accent-light: #301f37;
+  --card-shadow: 0 10px 35px -4px rgba(0, 0, 0, 0.6);
+  --ring-color: rgba(226, 109, 151, 0.4);
+}
+
+[data-theme='herbarium'] {
+  --bg-main: #1c1815;
+  --bg-card: rgba(37, 30, 26, 0.94);
+  --bg-subtle: #2d231d;
+  --bg-badge: #3d3027;
+  --border-color: #554236;
+  --border-hover: #735a4b;
+  --text-main: #fbf7f3;
+  --text-muted: #c2b1a3;
+  --accent: #de8c59;
+  --accent-hover: #eb9a68;
+  --accent-text: #ffffff;
+  --accent-light: #382921;
+  --card-shadow: 0 10px 35px -4px rgba(0, 0, 0, 0.6);
+  --ring-color: rgba(222, 140, 89, 0.4);
+}
+
+body {
+  font-family: 'Bodoni Moda', 'Bodoni MT', Didot, Georgia, serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.35s ease, color 0.35s ease;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+/* Macaron (Bodoni Didone Serif) & Gelato (Courier Monospace) */
+.font-macaron, h1, h2, h3, h4, .font-heading {
+  font-family: 'Bodoni Moda', 'Bodoni MT', Didot, Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.font-gelato, .font-typewriter {
+  font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+}
+
+/* Romantic Parisienne Script */
+.font-romantic, .font-quote {
+  font-family: 'Parisienne', cursive;
+  letter-spacing: 0.02em;
+}
+
+/* Cute & Floral scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* Pretty Floral Cards */
+.cute-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cute-card:hover {
+  border-color: var(--border-hover);
+}
+
+/* Tactile bouncy buttons */
+.cute-btn {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.cute-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+.cute-btn:active {
+  transform: translateY(1px) scale(0.96);
+}
+
+/* Pretty Floral stationery letterhead line */
+.floral-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--accent);
+  opacity: 0.85;
+}
+.floral-divider::before, .floral-divider::after {
+  content: '';
+  height: 1.5px;
+  flex: 1;
+  background: linear-gradient(to right, transparent, var(--border-color), transparent);
+}

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5f7"/>
+      <stop offset="45%" stop-color="#ffe4ea"/>
+      <stop offset="100%" stop-color="#ffd0db"/>
+    </linearGradient>
+
+    <!-- Rose Petal Gradient -->
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7597"/>
+      <stop offset="50%" stop-color="#e84a70"/>
+      <stop offset="100%" stop-color="#c92a52"/>
+    </linearGradient>
+
+    <!-- Soft Inner Rose -->
+    <linearGradient id="softPetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb8c8"/>
+      <stop offset="100%" stop-color="#f27092"/>
+    </linearGradient>
+
+    <!-- Golden Accents Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe8a3"/>
+      <stop offset="50%" stop-color="#e5b25d"/>
+      <stop offset="100%" stop-color="#c68a32"/>
+    </linearGradient>
+
+    <!-- Leaf Green Gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3d99b"/>
+      <stop offset="60%" stop-color="#60a866"/>
+      <stop offset="100%" stop-color="#3d7e44"/>
+    </linearGradient>
+
+    <!-- Shadow filter for luxury depth -->
+    <filter id="luxuryShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#a83250" flood-opacity="0.18"/>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base for Mobile Homescreen -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Delicate Gold Rim -->
+  <rect x="28" y="28" width="456" height="456" rx="100" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-opacity="0.65" stroke-dasharray="12 6"/>
+  <rect x="36" y="36" width="440" height="440" rx="92" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Subtle Botanical Wreath Leaves in Background -->
+  <g opacity="0.85" filter="url(#luxuryShadow)">
+    <!-- Leaves left -->
+    <path d="M 160 210 C 130 190 120 150 145 130 C 170 150 170 190 160 210 Z" fill="url(#leafGrad)"/>
+    <path d="M 148 240 C 115 240 100 215 115 190 C 140 200 150 225 148 240 Z" fill="url(#leafGrad)" opacity="0.85"/>
+    <path d="M 175 320 C 140 335 125 365 145 385 C 165 370 175 340 175 320 Z" fill="url(#leafGrad)"/>
+
+    <!-- Leaves right -->
+    <path d="M 352 210 C 382 190 392 150 367 130 C 342 150 342 190 352 210 Z" fill="url(#leafGrad)"/>
+    <path d="M 364 240 C 397 240 412 215 397 190 C 372 200 362 225 364 240 Z" fill="url(#leafGrad)" opacity="0.85"/>
+    <path d="M 337 320 C 372 335 387 365 367 385 C 347 370 337 340 337 320 Z" fill="url(#leafGrad)"/>
+  </g>
+
+  <!-- Golden Violin Silhouette with Rose Blossom -->
+  <g filter="url(#luxuryShadow)">
+    <!-- Elegant Stylized Golden Violin & F-Holes -->
+    <path d="M 235 125 C 235 110 245 95 256 95 C 267 95 277 110 277 125 C 277 140 265 150 256 160 C 247 150 235 140 235 125 Z" fill="url(#goldGrad)" opacity="0.9"/>
+    
+    <!-- Violin Neck / Fingerboard Line -->
+    <rect x="252" y="145" width="8" height="95" rx="4" fill="url(#goldGrad)"/>
+
+    <!-- Left Violin Waist Arch -->
+    <path d="M 210 230 C 180 250 175 285 200 315 C 185 345 195 385 235 405 C 250 412 262 412 277 405 C 317 385 327 345 312 315 C 337 285 332 250 302 230 C 285 218 227 218 210 230 Z" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="4.5" stroke-linecap="round" opacity="0.75"/>
+
+    <!-- Left F-Hole Curve -->
+    <path d="M 226 295 C 218 310 226 325 224 340 M 225 300 C 220 295 215 300 218 305" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Right F-Hole Curve -->
+    <path d="M 286 295 C 294 310 286 325 288 340 M 287 300 C 292 295 297 300 294 305" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Centerpiece: Blooming English Rose Blossom -->
+  <g filter="url(#luxuryShadow)">
+    <!-- Base Outer Petals -->
+    <path d="M 256 220 C 210 220 180 255 185 295 C 190 340 235 375 256 385 C 277 375 322 340 327 295 C 332 255 302 220 256 220 Z" fill="url(#roseGrad)"/>
+    
+    <!-- Layer 2 Petals (Lighter & Fluffy) -->
+    <path d="M 256 235 C 220 235 200 265 205 295 C 210 330 245 355 256 365 C 267 355 302 330 307 295 C 312 265 292 235 256 235 Z" fill="url(#softPetal)"/>
+    
+    <!-- Layer 3 Petals Swirls -->
+    <path d="M 230 270 C 225 300 250 325 270 325 C 285 325 295 310 290 290 C 285 270 260 260 245 275" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 275 265 C 285 280 275 305 255 310 C 240 310 232 295 240 282 C 248 270 268 268 275 265" fill="none" stroke="#fff0f3" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+    <path d="M 250 282 C 252 292 262 295 266 290 C 270 285 265 278 258 280" fill="none" stroke="#ffe3ea" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+    
+    <!-- Rose Heart Center -->
+    <circle cx="256" cy="285" r="9" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Golden Starlight Sparkles -->
+  <!-- Top Right Sparkle -->
+  <path d="M 365 110 Q 365 125 380 125 Q 365 125 365 140 Q 365 125 350 125 Q 365 125 365 110 Z" fill="url(#goldGrad)" filter="url(#softGlow)"/>
+  <circle cx="365" cy="125" r="2.5" fill="#ffffff"/>
+
+  <!-- Top Left Sparkle -->
+  <path d="M 135 150 Q 135 160 145 160 Q 135 160 135 170 Q 135 160 125 160 Q 135 160 135 150 Z" fill="url(#goldGrad)" filter="url(#softGlow)"/>
+
+  <!-- Bottom Sparkles -->
+  <path d="M 370 380 Q 370 392 382 392 Q 370 392 370 404 Q 370 392 358 392 Q 370 392 370 380 Z" fill="url(#goldGrad)"/>
+  <circle cx="370" cy="392" r="2" fill="#ffffff"/>
+
+  <circle cx="130" cy="340" r="4" fill="url(#goldGrad)"/>
+  <circle cx="395" cy="270" r="3.5" fill="url(#goldGrad)"/>
+  <circle cx="115" cy="260" r="2.5" fill="url(#goldGrad)"/>
+
+  <!-- Romantic Tiny Ribbon Bow at bottom -->
+  <g transform="translate(256, 430) scale(0.9)" opacity="0.9">
+    <path d="M -15 -5 C -35 -20 -40 5 -20 10 C -5 12 0 0 0 0 C 0 0 5 12 20 10 C 40 5 35 -20 15 -5 C 5 2 0 0 0 0 Z" fill="url(#goldGrad)"/>
+    <circle cx="0" cy="0" r="4.5" fill="url(#roseGrad)"/>
+    <path d="M -3 3 C -10 18 -18 25 -25 28 M 3 3 C 10 18 18 25 25 28" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>
